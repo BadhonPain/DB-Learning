@@ -1,0 +1,11 @@
+CREATE TABLE Student (
+    ID CHAR(7),
+    NAME VARCHAR2(200),
+    DOB DATE
+);
+
+INSERT INTO Student
+VALUES ('2405087','Badhon Pain', '2006-12-08');
+
+SELECT *
+FROM Student;

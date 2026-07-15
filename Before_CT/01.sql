@@ -1,0 +1,3 @@
+ALTER SESSION SET CURRENT_SCHEMA = college;
+
+SELECT * FROM Student;

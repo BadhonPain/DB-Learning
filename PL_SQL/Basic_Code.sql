@@ -1,0 +1,28 @@
+-- retrieves full name of the employee numbered 100.
+
+DECLARE
+    ENAME VARCHAR2(100);
+BEGIN
+    SELECT (FIRST_NAME || LAST_NAME) INTO ENAME
+    FROM HR.EMPLOYEES
+    WHERE EMPLOYEE_ID = 100;
+    DBMS_OUTPUT.PUT_LINE('THE NAME IS: ' || ENAME);
+END;
+/
+
+-- outputs the number of months employee 100 worked in the company.
+
+DECLARE
+    MONTHS NUMBER;
+    HIRING_DATE DATE;
+BEGIN 
+    SELECT HIRE_DATE INTO HIRING_DATE
+    FROM HR.EMPLOYEES
+    WHERE EMPLOYEE_ID = 100;
+    MONTHS := ROUND(MONTHS_BETWEEN(SYSDATE,HIRING_DATE), 0);
+    DBMS_OUTPUT.PUT_LINE('THE EMPLOYEE WORKED '|| MONTHS || ' MONTHS.');
+END;
+/
+
+-- show errors in PL/SQL
+SHOW ERRORS;

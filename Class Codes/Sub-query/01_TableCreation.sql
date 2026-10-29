@@ -1,0 +1,13 @@
+USE class_codes;
+
+CREATE TABLE Employee (
+	ID INT PRIMARY KEY,
+    DEPT VARCHAR(10),
+    SALARY INT
+);
+
+INSERT  INTO Employee VALUES
+(5001, 'EEE', 50000),
+(5002, 'EEE', 55000),
+(5003, 'CSE', 60000),
+(5004, 'CSE', 75000);
